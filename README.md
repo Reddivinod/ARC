@@ -65,7 +65,7 @@ After you've obtained the correct answer for the current test input grid, you ca
 
 When you're done with a task, use the "load task" button to open a new task.
 
-###Tasks chosen are as below:
+**###Tasks chosen are as below:
 
 1bfc4729:
 
