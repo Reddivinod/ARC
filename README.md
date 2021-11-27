@@ -64,3 +64,29 @@ When your output grid is ready, click the green "Submit!" button to check your a
 After you've obtained the correct answer for the current test input grid, you can switch to the next test input grid for the task using the "Next test input" button (if there is any available; most tasks only have one test input).
 
 When you're done with a task, use the "load task" button to open a new task.
+
+###Tasks chosen are as below:
+1bfc4729:
+    solve_1bfc4729 fucntion transforms input x based on the color each cell is having.
+    if it find cell with any color other than black, 
+    then it fill that row and row-2, also half of first and end columns
+0ca9ddb6:
+    solve_0ca9ddb6 fucntion transforms input x by adding colors around color=2(orange) and color=1(blue) and ignores remaining colors
+    if it find cell with color=2, fills color=4 in the diagonal directions of that cell 
+    if it find cell with color=1, fills color=7 in the east,west,north,south directions of that cell
+0dfd9992:
+    solve_0dfd9992 fucntion transforms input x by below steps
+    1.Check for number of empty/black cells in x 
+    2.for each cell check the color of the cell in the same position one row above this cell and check the color of adjacent cell towards left
+    3.let me call these cells as east and north cell colors to the cell with black color
+    4.extract the 2 rows of the where black cell is found
+    5.In this 2 rows find the same pattern where if any cell is having east and north cells as same as colors found in step 2, if yes then 
+      use this color to fill black cell
+       [6 3 2 3 6 5 6 3 2 3 6 5 6 3 2 3 6 5 6 3 2]
+       [5 2 1 2 5 4 5 2 1 2 5 0 5 2 1 2 5 4 5 2 1]
+       For the above example to find the value to replace 0,
+       east =5 (above 0)
+       north=5 (adjacent to 0)
+       in the 2 rows same pattern is having value 4, so 0 can be replaced with 4. 
+     6.Repeat step 2 to 5 for number of empty/black cells in x found in step 1
+     7.if still blacks cells left, then repeat the step 1 to 6, instead fetching rows, extract columns.
